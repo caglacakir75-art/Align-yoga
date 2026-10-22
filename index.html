@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111a1a">
+<title>ALIGN — Yoga Hareket ve Akış Asistanı</title>
+<style>
+:root{color-scheme:dark;--bg:#0e1717;--panel:#172422;--panel2:#20302b;--stroke:#36473f;--ink:#f5f5ec;--sub:#afc0b5;--mint:#b9e5bb;--green:#82ebb0;--bad:#fb8689;--yellow:#eac983}
+*{box-sizing:border-box}[hidden]{display:none!important}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 85% -20%,#263c32 0%,transparent 58%),var(--bg);color:var(--ink);font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,select,input{font:inherit}button{cursor:pointer;touch-action:manipulation}button:disabled{opacity:.4;cursor:not-allowed}button:focus-visible,select:focus-visible{outline:2px solid var(--mint);outline-offset:3px}.wrap{max-width:1480px;margin:auto;padding:26px clamp(15px,3vw,42px) 36px}.header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px}.brand{display:flex;align-items:center;gap:12px}.logo{display:grid;place-items:center;width:44px;height:44px;border:1px solid #759c82;border-radius:14px;color:var(--mint);font-size:29px}.wordmark{font-size:25px;line-height:1;letter-spacing:.2em;font-weight:720}.brand small{color:var(--sub);letter-spacing:.16em;font-size:9px}.pill{padding:8px 12px;border:1px solid #4a6553;border-radius:100px;font-size:11px;color:var(--mint)}.eyebrow{color:var(--mint);letter-spacing:.2em;text-transform:uppercase;font-size:10px;font-weight:750}.hero{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:22px}.hero h1{font-size:clamp(27px,4.1vw,55px);font-weight:490;line-height:1.08;letter-spacing:-.055em;margin:8px 0 0}.hero h1 em{color:var(--mint);font-style:normal}.hero p{color:var(--sub);max-width:330px;margin:0}.modes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;margin-bottom:18px}.mode{background:#1a2925;border:1px solid var(--stroke);border-radius:16px;padding:16px;text-align:left;color:var(--ink);min-height:112px;display:flex;flex-direction:column;gap:7px;transition:background .2s,border .2s}.mode:hover{background:#243830}.mode[aria-selected=true]{background:#293f32;border-color:#b4dfb3;box-shadow:0 0 0 1px #b4dfb355}.mode-num{font-size:11px;color:var(--mint);letter-spacing:.12em}.mode strong{font-size:15px;line-height:1.2}.mode span:last-child{color:var(--sub);font-size:11px}.layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(300px,.8fr);gap:17px;align-items:start}.panel{background:linear-gradient(140deg,#1c2a26,#14211f);border:1px solid var(--stroke);border-radius:20px;overflow:hidden;box-shadow:0 15px 45px #00000014}.topline{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 17px}.topline span{color:var(--sub);font-size:11px;letter-spacing:.05em}.topline b{font-size:12px;font-weight:650}.live{display:inline-flex;gap:7px;align-items:center}.led{height:7px;width:7px;border-radius:50%;background:#7c8d80}.led.on{background:var(--green);box-shadow:0 0 0 5px #77b58c20}.stage{position:relative;aspect-ratio:4/3;isolation:isolate;background:radial-gradient(ellipse at 50% 45%,#263a32,#0b1817 80%);overflow:hidden}.stage video,.stage canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.stage video{z-index:1}.stage canvas{pointer-events:none;z-index:2}.stage.mirror video,.stage.mirror canvas{transform:scaleX(-1)}.stage:after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(180deg,#0a16178c,transparent 30%,transparent 72%,#0a1617ae)}.viewchip{position:absolute;top:17px;left:17px;z-index:5;border:1px solid #d0d8cd38;border-radius:9px;background:#0b1918d9;color:#d3e4da;padding:8px 11px;font-size:11px}.hintchip{position:absolute;right:16px;top:17px;z-index:5;background:#263c32cc;border-radius:9px;padding:7px 9px;font-size:11px;color:#cce5d2}.screen-message{position:absolute;z-index:6;bottom:18px;left:16px;right:16px;text-align:center}.coach{display:inline-block;background:#101c18e8;border:1px solid #648369a6;border-radius:11px;padding:10px 16px;font-size:13px;max-width:96%;backdrop-filter:blur(12px)}.empty{position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;text-align:center;padding:20px}.empty-icon{height:112px;width:112px;border:1px solid #648875;border-radius:50%;display:grid;place-items:center;font-size:57px;font-weight:200;color:var(--mint);box-shadow:0 0 0 16px #88b78a0c}.empty h2{margin:13px 0 0;font-weight:560;font-size:22px}.empty p{max-width:310px;color:var(--sub);font-size:12px;margin:0}.bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 15px;flex-wrap:wrap}.row{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.btn{border:1px solid #4e6958;min-height:39px;padding:8px 13px;border-radius:10px;background:#2a3d32;color:var(--ink);font-weight:620;font-size:12px}.btn:hover{background:#355040}.btn.pri{background:var(--mint);border-color:var(--mint);color:#1b3023}.btn.pri:hover{background:#d0efcb}.btn.icon{width:40px;font-size:17px;padding:6px;text-align:center}.btn.on{color:var(--mint);border-color:var(--mint)}.legend{display:flex;gap:9px;color:var(--sub);font-size:10px}.legend span{display:flex;align-items:center;gap:5px}.dot{width:8px;height:8px;display:inline-block;border-radius:100%;background:#a8b4b0}.dot.good{background:var(--green)}.dot.bad{background:var(--bad)}.sidebar{display:flex;flex-direction:column;gap:14px}.side{padding:20px}.side h2{font-size:16px;margin:0 0 4px;letter-spacing:-.02em}.sub{font-size:12px;color:var(--sub)}.side h3{font-size:12px;letter-spacing:.08em;color:var(--mint);margin:19px 0 11px;text-transform:uppercase}select{width:100%;background:#2b4035;border:1px solid #55715f;border-radius:10px;color:var(--ink);padding:11px;margin:8px 0;font-size:13px}.content p{margin:7px 0 12px}.steps{display:flex;flex-direction:column;gap:8px;margin:12px 0}.stepitem{display:flex;align-items:center;gap:10px;padding:9px 10px;background:#21332c;border-radius:10px;border:1px solid #34483c}.stepitem.active{background:#304836;border-color:#c3e6b6}.stepitem.done{opacity:.68}.stepnum{font-size:10px;color:var(--mint);min-width:24px}.step-title{flex:1;font-size:12px}.step-type{font-size:10px;color:var(--sub)}.itemcontrols{display:flex;gap:3px}.itemcontrols button{background:#344b3d;color:var(--ink);border:0;border-radius:6px;padding:3px 7px}.buildline{display:grid;grid-template-columns:1fr auto;gap:8px}.buildline select{margin:0}.progress-track{height:7px;border-radius:20px;background:#354b3d;overflow:hidden;margin:12px 0}.progress-fill{height:100%;width:0;background:var(--mint);transition:width .18s}.numline{display:flex;align-items:baseline;justify-content:space-between;gap:10px}.bignum{font-size:26px;font-variant-numeric:tabular-nums;font-weight:590;letter-spacing:-.05em}.statuslabel{font-size:11px;color:var(--sub)}.checks{display:flex;flex-direction:column;gap:8px;max-height:240px;overflow:auto}.check{display:flex;align-items:center;gap:8px;font-size:12px;padding:8px 10px;background:#24372e;border-radius:8px}.checkbadge{width:19px;height:19px;display:grid;place-items:center;border-radius:50%;background:#4b5651;color:#fff;font-size:11px}.checkbadge.ok{background:#266a45;color:#c8ffda}.checkbadge.bad{background:#7d3034;color:#fff0f0}.check .checktext{flex:1}.check small{font-size:10px;color:var(--sub)}.note{border-top:1px solid var(--stroke);padding-top:12px;color:var(--sub);font-size:11px;margin-top:14px}.controlbar{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}.footer{color:#94a99b;font-size:11px;line-height:1.65;margin-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.warning{color:var(--yellow)!important}.tip{background:#283a31;border-radius:10px;padding:12px;margin-top:14px;font-size:12px;color:#d2e5d6}.em{color:var(--mint);font-weight:650}.tag{display:inline-block;padding:4px 8px;border-radius:99px;background:#2a4033;color:#c0eac5;font-size:10px}.spaced{display:flex;align-items:center;justify-content:space-between;gap:10px}.settings{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:8px 0}.settings label{font-size:12px;color:var(--sub)}.settings select{width:auto;min-width:125px;margin:0;padding:7px}.deco{border:1px solid var(--stroke);border-radius:12px;background:#23382e;padding:12px;margin-top:12px}.deco-title{color:var(--mint);font-size:10px;letter-spacing:.12em}.deco-text{font-size:13px;margin-top:5px}.controls-help{font-size:11px;color:var(--sub);margin-top:8px}.norecord{font-size:10px;color:var(--sub)}
+@media(max-width:1050px){.hero p{display:none}.modes{grid-template-columns:repeat(2,1fr)}.layout{grid-template-columns:minmax(0,1fr)}.sidebar{display:grid;grid-template-columns:1fr 1fr;align-items:start}}
+@media(max-width:650px){.wrap{padding:15px 12px 25px}.header{margin-bottom:20px}.brand{gap:8px}.logo{width:37px;height:37px;font-size:24px}.wordmark{font-size:20px}.pill{font-size:9px;padding:6px 9px}.hero{margin-bottom:15px}.hero h1{font-size:31px}.modes{gap:7px}.mode{min-height:115px;padding:12px;border-radius:12px}.mode strong{font-size:13px}.mode span:last-child{font-size:10px}.stage{aspect-ratio:3/4}.panel{border-radius:14px}.sidebar{grid-template-columns:1fr}.side{padding:16px}.bottom{align-items:stretch}.legend{justify-content:center;flex-wrap:wrap}.stepitem{padding:8px}.empty-icon{width:100px;height:100px}}
+.auto-toggle{display:flex;align-items:center;gap:9px;margin:10px 0 14px;font-size:12px;color:var(--sub);cursor:pointer}.auto-toggle input{accent-color:var(--mint);width:17px;height:17px;flex:none}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header class="header"><div class="brand"><div class="logo">⌁</div><div><div class="wordmark">ALIGN</div><small>YOGA MOTION STUDIO</small></div></div><div class="pill">BETA · CANLI KAMERA</div></header>
+<div class="hero"><div><div class="eyebrow">Hareketi gör, akışı takip et</div><h1>Yoga pratiğinde <em>akıllı rehber.</em></h1></div><p>Tek tek pozları öğren, yönlendirmeli akışa katıl, kendi serini oluştur veya serbest çalışırken hizalamanı kontrol et.</p></div>
+<nav class="modes" aria-label="Çalışma modu">
+<button class="mode" data-mode="teach" aria-selected="true"><span class="mode-num">01 / ÖĞREN</span><strong>Hareketleri öğren</strong><span>Poz ve geçişleri adım adım çalış</span></button>
+<button class="mode" data-mode="guided" aria-selected="false"><span class="mode-num">02 / TAKİP ET</span><strong>Rehberli akış</strong><span>Söylenen sırayı kamerayla izle</span></button>
+<button class="mode" data-mode="custom" aria-selected="false"><span class="mode-num">03 / OLUŞTUR</span><strong>Kendi akışım</strong><span>Poz ve geçişleri sıraya koy</span></button>
+<button class="mode" data-mode="free" aria-selected="false"><span class="mode-num">04 / SERBEST</span><strong>Serbest hizalama</strong><span>Kendi serini yaparken takip al</span></button>
+</nav>
+<div class="layout">
+<section class="panel" aria-label="Canlı yoga takibi">
+<div class="topline"><b><span class="live"><i class="led" id="liveLed"></i><span id="cameraState">Kamera kapalı</span></span></b><span id="modelState">MediaPipe · Hazır</span></div>
+<div class="stage mirror" id="stage"><video id="video" playsinline autoplay muted></video><canvas id="overlay"></canvas><div class="viewchip" id="viewChip">01 · Hareketleri öğren</div><div class="hintchip" id="qualityChip">Tam vücut görünmeli</div>
+<div class="empty" id="empty"><div class="empty-icon">⌁</div><h2 id="emptyTitle">Alanını hazırla</h2><p id="emptyText">Telefonu veya iPad'i sabitle, vücudunun tamamı kadraja girsin. Geçişler için kamerayı yandan yerleştir.</p><button id="emptyStart" class="btn pri">◉ Kamerayı başlat</button></div>
+<div class="screen-message"><span class="coach" id="coachText" role="status" aria-live="polite">Başlamak için kamerayı başlat.</span></div></div>
+<div class="bottom"><div class="row"><button class="btn pri" id="cameraBtn">◉ Kamerayı başlat</button><button class="btn icon" id="flipBtn" title="Kamera değiştir" aria-label="Kamera değiştir">⇄</button><button class="btn icon on" id="mirrorBtn" title="Ayna görünümü" aria-label="Ayna görünümü" aria-pressed="true">◧</button><button class="btn icon" id="voiceBtn" title="Sesli koç" aria-label="Sesli koç" aria-pressed="false">◖))</button></div><div class="legend"><span><i class="dot good"></i>Uygun</span><span><i class="dot bad"></i>Düzelt</span><span><i class="dot"></i>Belirsiz</span></div></div>
+</section>
+<div class="sidebar">
+<section class="panel side"><div class="spaced"><h2 id="modeTitle">Hareketleri öğren</h2><span class="tag" id="modeTag">MOD 01</span></div><p class="sub" id="modeIntro">Tek bir poz veya geçiş seç; kamerayla adım adım dene.</p>
+<div class="content" id="teachPanel"><label class="sub" for="lessonSelect">Öğrenmek istediğin hareket</label><select id="lessonSelect"></select><div class="deco"><div class="deco-title">NASIL YAPILIR?</div><div class="deco-text" id="lessonInstruction"></div></div><button class="btn pri" id="startLesson" style="margin-top:12px">Bu hareketi çalış</button></div>
+<div class="content" id="guidedPanel" hidden><label class="sub" for="guidedSelect">Hazır akış</label><select id="guidedSelect"><option value="basic">Temel akış · Tadasana → Uttanasana</option><option value="reach">Kolları uzat · katlan · geri yüksel</option></select><p class="sub">Pozların arasındaki geçişler de izlenir. Geçiş sırasında hız ve görünür diz kontrolü uygulanır.</p><button class="btn pri" id="startGuided">Akışı başlat</button></div>
+<div class="content" id="customPanel" hidden><label class="sub" for="addStep">Akışına poz veya geçiş ekle</label><div class="buildline"><select id="addStep"></select><button class="btn pri" id="addBtn">+ Ekle</button></div><div class="steps" id="builderList"></div><label class="auto-toggle"><input type="checkbox" id="autoTransitions" checked> İki poz arasındaki desteklenen geçişi otomatik ekle</label><div class="row"><button class="btn" id="saveBtn">Kaydet</button><button class="btn pri" id="startCustom">Akışımı çalış</button></div><p class="controls-help">Sıra bu cihazda saklanır. Tanınan geçişler otomatik eklenebilir; diğerleri ayrı seçilir.</p></div>
+<div class="content" id="freePanel" hidden><p class="sub">Sıra belirtmeden hareket et. Sistem yalnızca tanıdığı pozları ve desteklenen geçişleri değerlendirir; diğer hareketlerde tahmin yapmaz.</p><label class="sub" for="freeTarget">Hizalama hedefi</label><select id="freeTarget"><option value="auto">Otomatik tanı</option></select><div class="deco"><div class="deco-title">CANLI TESPİT</div><div class="deco-text" id="recognized">Henüz tespit yok.</div></div><button class="btn" id="clearFree" style="margin-top:10px">Takibi sıfırla</button></div>
+<div id="sessionPanel" hidden><h3>Çalışma sırası</h3><div class="steps" id="sessionSteps"></div><div class="controlbar"><button class="btn" id="prevBtn">← Önceki</button><button class="btn" id="pauseBtn">Duraklat</button><button class="btn" id="nextBtn">Sonraki →</button><button class="btn" id="endBtn">Bitir</button></div><p class="controls-help">Otomatik ilerleme yalnızca poz veya geçiş yeterli güvenle algılandığında olur. Dilersen elle ilerleyebilirsin.</p></div>
+<div class="note" id="modeFoot">Geçiş takibi için tam vücut görünümü ve yandan kamera önerilir.</div></section>
+<section class="panel side"><div class="spaced"><h2>Canlı hareket analizi</h2><span class="tag" id="analysisTag">HAZIR</span></div><div class="settings"><label for="viewSelect">Kamera açısı</label><select id="viewSelect"><option value="side">Yandan · geçişler</option><option value="front">Önden · duruşlar</option></select><label for="modelSelect">Model</label><select id="modelSelect"><option value="lite">Lite</option><option value="full">Full</option></select></div><div class="numline"><span class="sub" id="metricName">Hedef kontrolü</span><span class="bignum" id="metricValue">—</span></div><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div class="spaced"><span class="statuslabel" id="metricStatus">Kamera bekleniyor</span><span class="statuslabel" id="fpsState">— FPS</span></div><h3>Eklem ve hareket kontrolleri</h3><div class="checks" id="checks"></div><div class="tip" id="tip">Önce kamerayı aç. Geçişleri çalışırken iPad'i yandan görebileceğin bir açıya yerleştir.</div><div class="note">Deneysel 2B/3B tahmin. Kırmızı ve yeşil işaretler yalnızca ölçülebilen basit kontrolleri gösterir; anatomik güvenlik veya uzman onayı anlamına gelmez.</div></section>
+</div></div><footer class="footer"><span>ALIGN v3.1 · Tarayıcı tabanlı yoga hareket ve geçiş prototipi.</span><span>Görüntü tarayıcıda işlenir, sunucuya video yüklenmez. Model ve kütüphane internetten alınır.</span></footer>
+</main>
+<script type="module">
+const $=id=>document.getElementById(id);
+const MODEL_VERSION='0.10.21';
+const CDN=`https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@${MODEL_VERSION}`;
+const URLS={lite:'https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task',full:'https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_full/float16/1/pose_landmarker_full.task'};
+const J={ls:11,rs:12,le:13,re:14,lw:15,rw:16,lh:23,rh:24,lk:25,rk:26,la:27,ra:28,lf:31,rf:32};
+const BONES=[[11,12],[11,13],[13,15],[12,14],[14,16],[11,23],[12,24],[23,24],[23,25],[25,27],[27,31],[24,26],[26,28],[28,32]];
+const DOTS=[11,12,13,14,15,16,23,24,25,26,27,28,31,32];
+const POSES={
+ mountain:{name:'Tadasana · Dağ duruşu',short:'Tadasana',instruction:'Ayakların üzerinde dengeli dur, dizlerini rahatça uzat, kollarını yanına bırak. Nefesini tutma.',guide:'Dik dur ve kollarını iki yana serbest bırak.',view:'side'},
+ raised:{name:'Urdhva Hastasana · Kollar yukarı',short:'Kollar yukarı',instruction:'Tadasana’dan kollarını başının üzerine kaldır; omuzlarını zorlamadan yüksel.',guide:'Kollarını kontrollü biçimde yukarı kaldır.',view:'side'},
+ fold:{name:'Uttanasana · Öne katlanma',short:'Uttanasana',instruction:'Kalçadan katlan, dizlerini kilitlemeden gevşek bırak. Başını ve boynunu serbest tut. Ellerin yere değmek zorunda değil.',guide:'Kalçandan öne katlan; dizlerini kilitleme.',view:'side'},
+ half:{name:'Ardha Uttanasana · Yarım yükseliş',short:'Yarım yükseliş',instruction:'Öne katlanmadan gövdeni kısmen yükselt. Boynunu nötr tut; dizlerini kilitleme.',guide:'Gövdeni kontrollü biçimde yarıya kadar yükselt.',view:'side'},
+ tpose:{name:'T-kollar · Omuz hizası',short:'Açık kollar',instruction:'Öne bak ve kollarını omuz hizasında iki yana aç. Dirseklerini nazikçe uzat.',guide:'Kollarını omuz hizasında iki yana aç.',view:'front'},
+ warriorLeft:{name:'Virabhadrasana II · Sol diz önde',short:'Savaşçı II · Sol',instruction:'Genişçe açıl, sol dizini kontrollü bük, sağ bacağını uzat ve kollarını iki yana kaldır.',guide:'Sol dizini bük, kollarını iki yana aç.',view:'front'},
+ warriorRight:{name:'Virabhadrasana II · Sağ diz önde',short:'Savaşçı II · Sağ',instruction:'Genişçe açıl, sağ dizini kontrollü bük, sol bacağını uzat ve kollarını iki yana kaldır.',guide:'Sağ dizini bük, kollarını iki yana aç.',view:'front'}
+};
+const TRANSITIONS={
+ 'mountain>fold':{name:'Tadasana → Uttanasana',instruction:'Tadasana’da dik başlayıp kalçadan öne doğru katlan. Omurganı rahat bırak, acele etme.',from:'mountain',to:'fold',kind:'bend',a:0,b:1},
+ 'fold>mountain':{name:'Uttanasana → Tadasana',instruction:'Dizlerini rahat tutarak gövdeni kontrollü biçimde kaldır ve tekrar dik dur.',from:'fold',to:'mountain',kind:'bend',a:1,b:0},
+ 'mountain>raised':{name:'Tadasana → Kollar yukarı',instruction:'Tadasana’dan kollarını yavaşça yukarı kaldır.',from:'mountain',to:'raised',kind:'arms',a:0,b:1},
+ 'raised>mountain':{name:'Kollar yukarı → Tadasana',instruction:'Kollarını kontrollü olarak indir.',from:'raised',to:'mountain',kind:'arms',a:1,b:0},
+ 'raised>fold':{name:'Kollar yukarı → Uttanasana',instruction:'Kollarından başlayarak kalçadan öne katlan. Hareketi kontrollü sürdür.',from:'raised',to:'fold',kind:'bend',a:0,b:1},
+ 'fold>raised':{name:'Uttanasana → Kollar yukarı',instruction:'Gövdeni kontrollü yükselt; dengeyi bulduktan sonra kollarını yukarı uzat.',from:'fold',to:'raised',kind:'bend',a:1,b:0},
+ 'fold>half':{name:'Uttanasana → Yarım yükseliş',instruction:'Katlanmış pozdan gövdeni kısmen yükselt, dizlerini kilitleme.',from:'fold',to:'half',kind:'bend',a:1,b:.53},
+ 'half>fold':{name:'Yarım yükseliş → Uttanasana',instruction:'Yarım yükselişten yeniden öne katlan.',from:'half',to:'fold',kind:'bend',a:.53,b:1}
+};
+const poseStep=(key,hold=1700)=>({type:'pose',key,hold});
+const moveStep=(key)=>({type:'transition',key});
+const GUIDED={basic:[poseStep('mountain'),moveStep('mountain>fold'),poseStep('fold'),moveStep('fold>half'),poseStep('half'),moveStep('half>fold'),poseStep('fold'),moveStep('fold>mountain'),poseStep('mountain')],reach:[poseStep('mountain'),moveStep('mountain>raised'),poseStep('raised'),moveStep('raised>fold'),poseStep('fold'),moveStep('fold>raised'),poseStep('raised'),moveStep('raised>mountain'),poseStep('mountain')]};
+const modeInfo={teach:['Hareketleri öğren','MOD 01','Tek bir poz veya geçiş seç; kamerayla adım adım dene.'],guided:['Rehberli akış','MOD 02','Sıra sesli ve görsel olarak gösterilir; poz ve geçiş ayrı izlenir.'],custom:['Kendi akışım','MOD 03','Kendi sıranı oluştur ve her hareketin takip edilmesini sağla.'],free:['Serbest hizalama','MOD 04','Poz ve desteklenen geçişleri otomatik tanıma veya sabit hedefle kontrol et.']};
+let mode='teach', lesson={type:'pose',key:'mountain'}, flow=[],custom=[],stepIndex=0,sessionActive=false,sessionPaused=false,done=false,dwellSince=0,transState=null,modeScore=null,stablePose=null,poseCandidate=null,poseCandidateAt=0,freeFrom=null,freeSince=0;
+let stream=null,landmarker=null,loadedModel=null,running=false,starting=false,token=0,raf=0,videoTime=-1,lastEval=0,smoothed=null,frameStamps=[],pose3=null,voice=false,lastSpoken=0,lastText='';
+const video=$('video'),canvas=$('overlay'),ctx=canvas.getContext('2d');
+let currentRows=[],currentTarget={type:'pose',key:'mountain'};
+const clamp=(n,a=0,b=1)=>Math.max(a,Math.min(b,n));
+const pct=n=>`${Math.round(clamp(n)*100)}%`;
+const visible=p=>p&&Number.isFinite(p.x)&&Number.isFinite(p.y)&&p.x>.015&&p.x<.985&&p.y>.015&&p.y<.985&&(p.visibility??p.presence??1)>.55;
+const meet=(p,ids)=>ids.every(i=>visible(p?.[i]));
+const mean=(a,b)=>({x:(a.x+b.x)/2,y:(a.y+b.y)/2,z:((a.z||0)+(b.z||0))/2});
+const ratio=()=>((video.videoWidth||1280)/(video.videoHeight||720));
+const getAngle=(a,b,c,isWorld=false)=>{const r=isWorld?1:ratio();const q1=[(a.x-b.x)*r,a.y-b.y,(a.z||0)-(b.z||0)],q2=[(c.x-b.x)*r,c.y-b.y,(c.z||0)-(b.z||0)];if(!isWorld){q1[2]=0;q2[2]=0;}const s=q1.reduce((v,n,i)=>v+n*q2[i],0),d=Math.hypot(...q1)*Math.hypot(...q2);return d>1e-7?Math.acos(clamp(s/d,-1,1))*180/Math.PI:null};
+function row(id,name,points,state,msg){return{id,name,points,status:state===null?'unknown':state?'ok':'bad',msg:msg||name};}
+const tri=(ok,yes)=>ok?Boolean(yes):null;
+function measure(p,w){if(!p||!meet(p,[11,12,23,24,25,26,27,28]))return null;
+ const sh=mean(p[11],p[12]),h=mean(p[23],p[24]);const hip2D=[getAngle(p[11],p[23],p[25]),getAngle(p[12],p[24],p[26])].filter(n=>n!==null);const hip3D=w&&w.length>=29?[getAngle(w[11],w[23],w[25],true),getAngle(w[12],w[24],w[26],true)].filter(Number.isFinite):[];
+ const hipAngle=hip3D.length?hip3D.reduce((a,b)=>a+b)/hip3D.length:hip2D.reduce((a,b)=>a+b)/hip2D.length;
+ const inclin=(Math.atan2(Math.abs(sh.x-h.x)*ratio(), h.y-sh.y)*180/Math.PI+360)%360;
+ const bendByHip=clamp((175-hipAngle)/110),bendByScreen=clamp(inclin/150);
+ const bend=hip3D.length?clamp(.67*bendByHip+.33*bendByScreen):clamp(.35*bendByHip+.65*bendByScreen);
+ const knees=[getAngle(p[23],p[25],p[27]),getAngle(p[24],p[26],p[28])];
+ const elbows=[getAngle(p[11],p[13],p[15]),getAngle(p[12],p[14],p[16])];
+ const width=Math.max(.04,Math.abs(p[11].x-p[12].x)*ratio());const shoulderToWrist=(idx,s)=>visible(p[idx])?((p[s].y-p[idx].y)/(Math.abs(sh.y-h.y)||.1)):null;
+ const armsLift=[shoulderToWrist(15,11),shoulderToWrist(16,12)];
+ const arms=armsLift.every(Number.isFinite)?clamp(((armsLift[0]+armsLift[1])/2+.25)/1.55):null;
+ const armsHoriz=meet(p,[11,12,15,16])&&Math.abs(p[15].y-p[11].y)<.10&&Math.abs(p[16].y-p[12].y)<.10&&Math.abs(p[15].x-p[11].x)*ratio()>width*.65&&Math.abs(p[16].x-p[12].x)*ratio()>width*.65;
+ const wristsNearHip=meet(p,[11,12,15,16,23,24])&&p[15].y>p[11].y&&p[16].y>p[12].y&&Math.abs(p[15].x-p[23].x)*ratio()<width*1.1&&Math.abs(p[16].x-p[24].x)*ratio()<width*1.1;
+ const feetWide=meet(p,[11,12,27,28])&&Math.abs(p[27].x-p[28].x)*ratio()>width*1.65;
+ return{bend,hipAngle,inclin,knees,elbows,arms,armsHoriz,wristsNearHip,feetWide,width,sh,h};
+}
+function poseChecks(key,p,m){if(!m)return[];
+ const mk=(id,name,pts,fn,msg)=>row(id,name,pts,tri(meet(p,pts),fn()),msg);
+ const stand=()=>m.bend<.29&&m.hipAngle>140;
+ const kneestr=(limit=150)=>m.knees.every(k=>k!==null&&k>=limit);
+ const kneeSoft=()=>m.knees.every(k=>k!==null&&k>117);
+ const elbowstr=()=>m.elbows.every(k=>k!==null&&k>145);
+ const bothHands=()=>m.arms!==null&&m.arms>.73;
+ const torso=[11,12,23,24,25,26];
+ if(key==='mountain')return[
+  mk('upright','Gövde dik ve kalça açık',torso,stand,'Kalçadan dik konuma gel.'),
+  mk('knees','Dizler rahatça uzatılmış',[23,25,27,24,26,28],()=>kneestr(150),'Dizlerini zorlamadan uzat.'),
+  mk('armsDown','Kollar gövdenin yanında',[11,12,15,16,23,24],()=>m.wristsNearHip,'Kollarını gövdene yaklaştır.')];
+ if(key==='raised')return[
+  mk('upright','Gövde dik ve dengeli',torso,stand,'Gövdeni dik tut.'),
+  mk('armsUp','Bilekler omuzlardan yukarıda',[11,12,15,16,23,24],bothHands,'Kollarını başın üzerine doğru kaldır.'),
+  mk('elbows','Dirsekler rahatça uzatılmış',[11,13,15,12,14,16],elbowstr,'Dirseklerini nazikçe uzat.')];
+ if(key==='fold')return[
+  mk('fold','Kalçadan öne katlanma',torso,()=>m.bend>.66,'Kalçadan biraz daha katlan.'),
+  mk('softKnees','Dizler kilitlenmeden kontrollü',[23,25,27,24,26,28],kneeSoft,'Dizlerini rahatça bükülü tut.'),
+  mk('handsLow','Eller kalçanın altında',[15,16,23,24],()=>p[15].y>m.h.y&&p[16].y>m.h.y,'Kollarını rahat bırak; yere değmek zorunda değilsin.')];
+ if(key==='half')return[
+  mk('half','Kalçadan yarım yükseliş',torso,()=>m.bend>.39&&m.bend<.73,'Gövdeni yarım yükseliş konumuna getir.'),
+  mk('knees','Dizler kontrollü',[23,25,27,24,26,28],kneeSoft,'Dizlerini kilitleme.')];
+ if(key==='tpose')return[
+  mk('upright','Gövde dik',torso,stand,'Gövdeni dikleştir.'),
+  mk('armsWide','Kollar omuz hizasında',[11,12,15,16],()=>m.armsHoriz,'Kollarını iki yana omuz hizasında aç.'),
+  mk('elbows','Dirsekler uzatılmış',[11,13,15,12,14,16],elbowstr,'Dirseklerini nazikçe uzat.')];
+ if(key.startsWith('warrior')){const front=key==='warriorLeft'?0:1,back=1-front,kpts=front?[24,26,28]:[23,25,27],bpts=back?[24,26,28]:[23,25,27];return[
+  mk('upright','Gövde dik',torso,()=>m.bend<.39,'Gövdeni dik tut.'),
+  mk('armsWide','Kollar omuz hizasında',[11,12,15,16],()=>m.armsHoriz,'Kollarını omuz hizasında aç.'),
+  mk('kneeFront','Öndeki diz kontrollü bükülü',kpts,()=>m.knees[front]>=75&&m.knees[front]<=145,'Öndeki diz bükülüşünü ayarla.'),
+  mk('kneeBack','Arkadaki bacak uzatılmış',bpts,()=>m.knees[back]>145,'Arkadaki dizini rahatça uzat.'),
+  mk('feet','Geniş adım',[11,12,27,28],()=>m.feetWide,'Adım aralığını ayarla.')];}
+ return[];
+}
+function positionVerdict(key,p,m){const rows=poseChecks(key,p,m);const known=rows.filter(x=>x.status!=='unknown');return{rows,ratio:known.length?known.filter(r=>r.status==='ok').length/rows.length:0,complete:rows.length>=2&&rows.every(x=>x.status==='ok'),known:known.length};}
+function targetText(t){return t.type==='pose'?POSES[t.key].short:TRANSITIONS[t.key].name;}
+function targetInstr(t){return t.type==='pose'?POSES[t.key].instruction:TRANSITIONS[t.key].instruction;}
+function activeTarget(){return mode==='free'?currentTarget:sessionActive?flow[stepIndex]:lesson;}
+function resetTracking(){dwellSince=0;transState=null;done=false;poseCandidate=null;stablePose=null;freeFrom=null;freeSince=0;currentRows=[];modeScore=null;}
+function switchMode(value){mode=value;endSession(false);resetTracking();document.querySelectorAll('.mode').forEach(n=>n.setAttribute('aria-selected',String(n.dataset.mode===value)));for(const k of Object.keys(modeInfo))$(k+'Panel').hidden=k!==value;const [title,tag,intro]=modeInfo[value];$('modeTitle').textContent=title;$('modeTag').textContent=tag;$('modeIntro').textContent=intro;$('viewChip').textContent=tag+' · '+title;$('sessionPanel').hidden=true;currentTarget=value==='free'?{type:'pose',key:'mountain'}:lesson;setCoach(value==='free'?'Serbest hareket et; yalnızca güvenle tanınan duruşlara uyarı vereceğim.':'Kamerayı aç ve çalışmaya başla.');renderRows([]);$('analysisTag').textContent='HAZIR';$('metricValue').textContent='—';$('metricName').textContent='Hedef kontrolü';$('progressFill').style.width='0';$('tip').textContent=value==='free'?'Poz tanıma belirsizse kırmızı veya yeşil hüküm vermeyeceğim.':'Geçişler için cihazını yandan sabitle ve tüm vücudunun görünmesini sağla.';}
+document.querySelectorAll('.mode').forEach(b=>b.addEventListener('click',()=>switchMode(b.dataset.mode)));
+function buildPickers(){for(const [key,p] of Object.entries(POSES)){const o=new Option('Poz · '+p.name,'pose|'+key);$('lessonSelect').add(o);$('addStep').add(new Option('Poz · '+p.name,'pose|'+key));$('freeTarget').add(new Option(p.name,key));}for(const [key,t] of Object.entries(TRANSITIONS)){const label='Geçiş · '+t.name;$('lessonSelect').add(new Option(label,'transition|'+key));$('addStep').add(new Option(label,'transition|'+key));} $('lessonSelect').value='pose|mountain';}
+buildPickers();
+function picked(select){const [type,key]=select.value.split('|');return{type,key,hold:1700};}
+function lessonChanged(){lesson=picked($('lessonSelect'));$('lessonInstruction').textContent=targetInstr(lesson);if(mode==='teach'&&!sessionActive){currentTarget=lesson;resetTracking();setCoach(POSES[lesson.key]?.guide||TRANSITIONS[lesson.key]?.instruction||'Hareketi yap.');}}
+$('lessonSelect').addEventListener('change',lessonChanged);lessonChanged();
+function labelSteps(steps,edit=false){return steps.map((s,i)=>`<div class="stepitem ${sessionActive&&flow===steps&&i===stepIndex?'active':''} ${sessionActive&&flow===steps&&i<stepIndex?'done':''}"><span class="stepnum">${String(i+1).padStart(2,'0')}</span><span class="step-title">${targetText(s)}<br><span class="step-type">${s.type==='pose'?'POZ':'GEÇİŞ'}</span></span>${edit?`<span class="itemcontrols"><button data-op="up" data-i="${i}" aria-label="Yukarı al">↑</button><button data-op="down" data-i="${i}" aria-label="Aşağı al">↓</button><button data-op="delete" data-i="${i}" aria-label="Sil">×</button></span>`:''}</div>`).join('');}
+function drawBuilder(){$('builderList').innerHTML=custom.length?labelSteps(custom,true):'<p class="sub">Henüz hareket eklemedin.</p>'}
+$('addBtn').addEventListener('click',()=>{
+ const next=picked($('addStep'));
+ const previous=custom.at(-1);
+ const link=previous?.type==='pose' && next.type==='pose' && previous.key!==next.key ? `${previous.key}>${next.key}` : null;
+ const canBridge=Boolean(link && TRANSITIONS[link] && $('autoTransitions').checked);
+ if(custom.length+(canBridge?2:1)>30){setCoach('Bir akışta en fazla 30 adım bulunabilir.');return;}
+ if(canBridge)custom.push(moveStep(link));
+ custom.push(next);
+ if(link&&!TRANSITIONS[link]&&$('autoTransitions').checked)setCoach('Bu iki poz arasında otomatik geçiş tanımı yok. Geçişin kontrolünü atlayıp pozları sırayla izlerim.');
+ else if(canBridge)setCoach('Poz ve aradaki geçiş sıraya eklendi.');
+ drawBuilder();
+});
+$('builderList').addEventListener('click',e=>{const btn=e.target.closest('[data-op]');if(!btn)return;const i=Number(btn.dataset.i),op=btn.dataset.op;if(op==='delete')custom.splice(i,1);if(op==='up'&&i>0)[custom[i-1],custom[i]]=[custom[i],custom[i-1]];if(op==='down'&&i<custom.length-1)[custom[i+1],custom[i]]=[custom[i],custom[i+1]];drawBuilder()});
+$('saveBtn').addEventListener('click',()=>{try{localStorage.setItem('align-yoga-custom-v3',JSON.stringify(custom));setCoach('Akış bu tarayıcıya kaydedildi.')}catch(e){setCoach('Tarayıcı kaydetmeye izin vermedi.')}});
+try{const saved=JSON.parse(localStorage.getItem('align-yoga-custom-v3')||'null');if(Array.isArray(saved))custom=saved.filter(s=>s&&((s.type==='pose'&&POSES[s.key])||(s.type==='transition'&&TRANSITIONS[s.key]))).slice(0,30)}catch(e){}
+if(!custom.length)custom=[poseStep('mountain'),moveStep('mountain>fold'),poseStep('fold'),moveStep('fold>mountain'),poseStep('mountain')];drawBuilder();
+function startSession(items){if(!items.length){setCoach('Önce en az bir hareket ekle.');return;}flow=items.map(s=>({...s}));stepIndex=0;sessionActive=true;sessionPaused=false;resetTracking();currentTarget=flow[0];$('sessionPanel').hidden=false;$('pauseBtn').textContent='Duraklat';renderSession();setCoach('Başla: '+targetText(currentTarget)+'. '+targetInstr(currentTarget));speak(targetText(currentTarget),true);}
+function endSession(message=true){sessionActive=false;sessionPaused=false;flow=[];stepIndex=0;dwellSince=0;transState=null;$('sessionPanel').hidden=true;if(message)setCoach('Akış sona erdi.');}
+function renderSession(){$('sessionSteps').innerHTML=labelSteps(flow,false);$('prevBtn').disabled=stepIndex===0;$('nextBtn').disabled=stepIndex>=flow.length-1;}
+function stepTo(index){if(!sessionActive)return;if(index>=flow.length){const last=flow.length;endSession();setCoach(`${last} adımlı akış tamamlandı.`);speak('Akış tamamlandı.',true);return;}stepIndex=Math.max(0,index);dwellSince=0;transState=null;done=false;currentTarget=flow[stepIndex];renderSession();setCoach(`${stepIndex+1}. adım: ${targetText(currentTarget)}. ${targetInstr(currentTarget)}`);speak(`${stepIndex+1}. adım: ${targetText(currentTarget)}`,true);}
+$('startLesson').addEventListener('click',()=>startSession([lesson]));$('startGuided').addEventListener('click',()=>startSession(GUIDED[$('guidedSelect').value]||GUIDED.basic));$('startCustom').addEventListener('click',()=>startSession(custom));$('nextBtn').addEventListener('click',()=>stepTo(stepIndex+1));$('prevBtn').addEventListener('click',()=>stepTo(stepIndex-1));$('pauseBtn').addEventListener('click',()=>{sessionPaused=!sessionPaused;$('pauseBtn').textContent=sessionPaused?'Devam et':'Duraklat';setCoach(sessionPaused?'Akış duraklatıldı.':targetInstr(currentTarget));dwellSince=0;transState=null;});$('endBtn').addEventListener('click',()=>endSession());
+$('freeTarget').addEventListener('change',()=>{stablePose=null;poseCandidate=null;freeFrom=null;freeSince=0;currentRows=[];});$('clearFree').addEventListener('click',()=>{resetTracking();$('recognized').textContent='Takip sıfırlandı.';setCoach('Yeniden bir poz al.');});
+function speak(text,force=false){if(!voice||!window.speechSynthesis)return;const now=performance.now();if(!force&&(now-lastSpoken<6500||lastText===text))return;lastSpoken=now;lastText=text;try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='tr-TR';u.rate=.88;speechSynthesis.speak(u)}catch(e){}}
+function setCoach(msg){$('coachText').textContent=msg}
+function renderRows(rows){$('checks').innerHTML=rows.length?rows.map(c=>`<div class="check"><span class="checkbadge ${c.status}">${c.status==='ok'?'✓':c.status==='bad'?'!':'·'}</span><span class="checktext">${c.name}</span><small>${c.status==='ok'?'Uygun':c.status==='bad'?'Düzelt':'Belirsiz'}</small></div>`).join(''):'<p class="sub">Kamera ve hedef bekleniyor.</p>';}
+renderRows([]);
+function updateScore(rows,pctVal,label,msg,tag){currentRows=rows;modeScore=pctVal;renderRows(rows);$('progressFill').style.width=pct(pctVal);$('metricValue').textContent=pct(pctVal);$('metricName').textContent=label;$('metricStatus').textContent=msg;$('analysisTag').textContent=tag;}
+function transitionStep(t,p,m,now){const spec=TRANSITIONS[t.key];if(!m)return{rows:[],progress:0,complete:false,coach:'Kalça ve diz noktalarının görünmesini sağla.'};
+ const raw=spec.kind==='arms'?m.arms:m.bend;
+ if(raw===null)return{rows:[],progress:0,complete:false,coach:'Kollar kamerada görünmüyor.'};
+ const completion=clamp((raw-spec.a)/(spec.b-spec.a));
+ if(!transState)transState={originSeen:false,moved:false,best:0,endSince:0,prev:raw,prevAt:now,fastFrames:0};
+ const tr=transState;const source=positionVerdict(spec.from,p,m);const dest=positionVerdict(spec.to,p,m);
+ if(source.complete || Math.abs(raw-spec.a)<.17)tr.originSeen=true;
+ if(tr.originSeen&&completion>.17)tr.moved=true;
+ tr.best=Math.max(tr.best,completion);
+ const regress=tr.originSeen&&tr.moved&&completion<tr.best-.25;
+ // Basit tempo kontrolü: ardışık hızlı kareler varsa uyar; tıbbi bir hüküm değildir.
+ const elapsed=Math.max(.05,(now-tr.prevAt)/1000);
+ const motionRate=Math.abs(raw-tr.prev)/elapsed;
+ if(now-tr.prevAt>=70){tr.fastFrames=motionRate>1.5?Math.min(4,tr.fastFrames+1):Math.max(0,tr.fastFrames-1);tr.prev=raw;tr.prevAt=now;}
+ const tooFast=tr.fastFrames>=2;
+ const kOK=meet(p,[23,25,27,24,26,28]);const kneesOK=m.knees.every(k=>k>115);
+ const rows=[row('transition','Hareket ilerlemesi',[11,12,23,24,25,26],tr.originSeen&&tr.moved&&completion>.20,'Hareketi başlat.'),row('kneesSafe','Diz hareketi izleniyor',[23,25,27,24,26,28],kOK?kneesOK:null,'Dizlerini kilitlemeden devam et.'),row('direction','Geçiş yönü',[11,12,23,24],!tr.originSeen?null:!regress,'Hedef yöne ilerle.'),row('pace','Hareket temposu',[11,12,23,24],tr.moved?!tooFast:null,'Biraz daha yavaş ve kontrollü hareket et.')];
+ const arrived=tr.originSeen&&tr.moved&&completion>.58&&dest.complete&&!tooFast;
+ if(arrived){if(!tr.endSince)tr.endSince=now;}else tr.endSince=0;
+ const complete=Boolean(tr.endSince&&now-tr.endSince>650);
+ let coach=tooFast?'Hareketi biraz yavaşlat.':!tr.originSeen?`Önce ${POSES[spec.from].short} pozuna gel.`:!tr.moved?'Geçişi kontrollü biçimde başlat.':regress?'Hareketi yavaşça hedefe doğru sürdür.':!arrived?`Geçiş izleniyor · ${pct(completion)}. ${POSES[spec.to].short} pozuna yönel.`:'Hedef pozunu kısa süre koru.';
+ return{rows,progress:completion,complete,coach};
+}
+// Serbest modda yalnızca TAMAMEN doğru pozları seçmek, hatalı hizalamalara kırmızı uyarı
+// göstermeyi imkânsız kılar. Bu kaba tanımlayıcı poz niyetini ayırt eder; ayrı kontroller
+// sonrasında kırmızı/yeşil olarak raporlanır. Belirsiz pozlara isim verilmez.
+function likelyPose(p,m){
+ if(!m)return null;
+ const front=$('viewSelect').value==='front';
+ if(front&&m.feetWide&&m.bend<.48){
+  const [left,right]=m.knees;
+  if(Number.isFinite(left)&&Number.isFinite(right)){
+   if(left<157 && right>132 && right-left>17)return 'warriorLeft';
+   if(right<157 && left>132 && left-right>17)return 'warriorRight';
+  }
+ }
+ if(m.bend>.71)return 'fold';
+ if(m.bend>.40)return 'half';
+ if(front&&m.armsHoriz)return 'tpose';
+ if(m.arms!==null&&m.arms>.61)return 'raised';
+ if(m.bend<.36&&(m.wristsNearHip||(m.arms!==null&&m.arms<.13)))return 'mountain';
+ return null;
+}
+function recognizePose(p,m,now){
+ const candidate=likelyPose(p,m);
+ if(candidate!==poseCandidate){poseCandidate=candidate;poseCandidateAt=now;}
+ if(candidate&&now-poseCandidateAt>=850)stablePose=candidate;
+ if(!candidate&&now-poseCandidateAt>=950)stablePose=null;
+ // Yeni duruşa geçerken önceki duruşun hizalamasını zorla göstermeyelim.
+ const key=candidate===stablePose?candidate:null;
+ return {key,verdict:key?positionVerdict(key,p,m):null,candidate};
+}
+function processFree(p,m,now){const target=$('freeTarget').value;if(target!=='auto'){currentTarget={type:'pose',key:target};const verdict=positionVerdict(target,p,m);updateScore(verdict.rows,verdict.ratio,'Hedef hizalama',verdict.complete?'Hedef aralıkta':'Poz kontrol ediliyor','MANUEL');setCoach(verdict.rows.find(x=>x.status==='bad')?.msg||'Kendini kadraja al.');$('recognized').textContent=POSES[target].name;return;}
+ const r=recognizePose(p,m,now);
+ if(r.key){if(freeFrom!==r.key){freeFrom=r.key;freeSince=now;}
+ currentTarget={type:'pose',key:r.key};const verdict=positionVerdict(r.key,p,m);updateScore(verdict.rows,verdict.ratio,'Tanınan duruş',verdict.complete?'Poz tanındı':'Duruş kontrol ediliyor','TANINDI');$('recognized').textContent=POSES[r.key].name;setCoach(verdict.rows.find(x=>x.status==='bad')?.msg||`${POSES[r.key].short} tanındı; pozunu koru.`);
+ }else{
+ // Desteklenen geçişte olabileceğine ilişkin süreç göstergesi; poz tamamlanmadan onay yok.
+ let match=null;
+ if(freeFrom&&now-freeSince<15000){const candidates=Object.entries(TRANSITIONS).filter(([,v])=>v.from===freeFrom&&m).map(([key,v])=>({key,v,progress:clamp(((v.kind==='arms'?m.arms:m.bend)-v.a)/(v.b-v.a))}));match=candidates.find(c=>c.progress>.16&&c.progress<.95);}
+ const msg=match?`${TRANSITIONS[match.key].name} · hareket izleniyor`:'Güvenilir poz tanınmadı; bu bir hata değerlendirmesi değildir.';
+ currentTarget={type:'transition',key:match?.key||'mountain>fold'};
+ const transRows=match?[row('transMotion','Geçiş ilerlemesi',[11,12,23,24],null,'Hareket yönü tahmin ediliyor.'),row('transKnees','Dizler görünür ve rahat',[23,25,27,24,26,28],meet(p,[23,25,27,24,26,28])?m.knees.every(k=>k>115):null,'Dizlerini kilitlememeye dikkat et.')]:[];
+ updateScore(transRows,match?match.progress:0,match?'Olası geçiş':'Otomatik tanı',match?'Geçiş doğrulanmadı':'Belirsiz',match?'GEÇİŞ':'BELİRSİZ');$('recognized').textContent=msg;setCoach(match?'Hareketi kontrollü sürdür. Hedef pozda tekrar değerlendireceğim.':'Kameraya tamamı görünecek şekilde dur.');
+ }}
+function processPoseFrame(p,w,now){const m=measure(p,w);if(!m){currentRows=[];updateScore([],0,'Görünüm','Kalça/dizler görünmüyor','BELİRSİZ');setCoach('Tam vücudun kamera içinde görünsün.');return;}
+ if(mode==='free'){processFree(p,m,now);return;}
+ if(sessionActive&&sessionPaused){setCoach('Akış duraklatıldı.');return;}
+ const t=activeTarget();currentTarget=t;
+ if(t.type==='transition'){
+  const result=transitionStep(t,p,m,now);updateScore(result.rows,result.progress,'Geçiş ilerlemesi',result.complete?'Tamamlandı':'Hareket izleniyor','GEÇİŞ');setCoach(result.coach);if(sessionActive&&result.complete)stepTo(stepIndex+1);else if(!sessionActive&&result.complete&&!done){done=true;speak('Geçiş tamamlandı.',true);}return;
+ }
+ const verdict=positionVerdict(t.key,p,m);
+ if(verdict.complete){if(!dwellSince)dwellSince=now;}else dwellSince=0;
+ const hold=(t.hold||1700);const held=dwellSince?clamp((now-dwellSince)/hold):0;
+ updateScore(verdict.rows,verdict.ratio,'Poz hizalaması',verdict.complete?`Poz korunuyor · ${Math.floor(held*100)}%`:'Poz kontrol ediliyor','POZ');
+ const bad=verdict.rows.find(c=>c.status==='bad');setCoach(bad?bad.msg:verdict.complete?'Uygun; pozunu kısa süre koru.':'Tam vücudun kamerada görünmeli.');if(bad)speak(bad.msg);
+ if(held>=1){if(sessionActive)stepTo(stepIndex+1);else if(!done){done=true;speak('Pozu başarıyla korudun.',true);}}else done=false;
+}
+function draw(pts,rows){const bounds=canvas.getBoundingClientRect();const dpr=Math.min(2,devicePixelRatio||1),cw=Math.max(1,Math.round(bounds.width*dpr)),ch=Math.max(1,Math.round(bounds.height*dpr));if(canvas.width!==cw||canvas.height!==ch){canvas.width=cw;canvas.height=ch;}ctx.clearRect(0,0,cw,ch);if(!pts)return;
+ const vw=video.videoWidth||1280,vh=video.videoHeight||720,s=Math.min(cw/vw,ch/vh),offx=(cw-vw*s)/2,offy=(ch-vh*s)/2;const xy=p=>[offx+p.x*vw*s,offy+p.y*vh*s];
+ const severity={unknown:0,ok:1,bad:2},state=new Map();for(const r of rows){for(const i of r.points){if(!state.has(i)||severity[r.status]>severity[state.get(i)])state.set(i,r.status);}}
+ const col={ok:'#82ebb0',bad:'#fb8689',unknown:'#a9b8b1'};ctx.save();ctx.lineCap='round';for(const [a,b] of BONES){if(!visible(pts[a])||!visible(pts[b]))continue;const [ax,ay]=xy(pts[a]),[bx,by]=xy(pts[b]);const key=state.get(a)==='bad'||state.get(b)==='bad'?'bad':state.get(a)==='ok'&&state.get(b)==='ok'?'ok':'unknown';ctx.beginPath();ctx.moveTo(ax,ay);ctx.lineTo(bx,by);ctx.lineWidth=2.8*dpr;ctx.strokeStyle=col[key]+'AA';ctx.stroke();}
+ for(const i of DOTS){if(!visible(pts[i]))continue;const [x,y]=xy(pts[i]),key=state.get(i)||'unknown',emph=key!=='unknown';if(emph){ctx.beginPath();ctx.arc(x,y,12*dpr,0,Math.PI*2);ctx.fillStyle=col[key]+'35';ctx.fill();}ctx.beginPath();ctx.arc(x,y,(emph?5:3)*dpr,0,Math.PI*2);ctx.fillStyle=col[key];ctx.fill();ctx.strokeStyle='#172a21';ctx.lineWidth=1.4*dpr;ctx.stroke();}ctx.restore();}
+function smoothPoints(pts){if(!smoothed){smoothed=pts.map(p=>({...p}));return smoothed;}smoothed=pts.map((p,i)=>{const old=smoothed[i];return !old||!visible(p)||!visible(old)?{...p}:{...p,x:old.x+(p.x-old.x)*.46,y:old.y+(p.y-old.y)*.46,z:old.z+(p.z-old.z)*.46};});return smoothed;}
+function renderFrame(now){if(!running)return;raf=requestAnimationFrame(renderFrame);if(document.hidden||video.readyState<2||!landmarker||now-lastEval<75||video.currentTime===videoTime)return;lastEval=now;videoTime=video.currentTime;try{const result=landmarker.detectForVideo(video,now);frameStamps.push(now);while(frameStamps[0]<now-1000)frameStamps.shift();$('fpsState').textContent=frameStamps.length+' FPS';if(result.landmarks?.[0]?.length>=29){const pts=smoothPoints(result.landmarks[0]);pose3=result.worldLandmarks?.[0]||null;processPoseFrame(pts,pose3,now);draw(pts,currentRows);$('qualityChip').textContent='Vücut algılandı';}else{smoothed=null;pose3=null;dwellSince=0;transState=null;draw(null,[]);currentRows=[];updateScore([],0,'Görünüm','Kişi algılanmadı','BELİRSİZ');setCoach('Biraz geri çekil; baştan ayaklara kadar tüm vücudun görünsün.');$('qualityChip').textContent='Kişi aranıyor';}}catch(e){console.error('Kare işleme hatası',e);setCoach('Görüntü işlenemedi. Kamerayı kapatıp yeniden başlat.');stopCamera();}}
+async function getModel(){const kind=$('modelSelect').value;if(landmarker&&loadedModel===kind)return;if(landmarker){landmarker.close();landmarker=null;loadedModel=null;}const vision=await import(`${CDN}/vision_bundle.mjs`);const fileset=await vision.FilesetResolver.forVisionTasks(`${CDN}/wasm`);const opts={baseOptions:{modelAssetPath:URLS[kind],delegate:'GPU'},runningMode:'VIDEO',numPoses:1,minPoseDetectionConfidence:.55,minPosePresenceConfidence:.55,minTrackingConfidence:.55};try{landmarker=await vision.PoseLandmarker.createFromOptions(fileset,opts);}catch(e){console.warn('GPU olmadı; CPU deneniyor',e);opts.baseOptions.delegate='CPU';landmarker=await vision.PoseLandmarker.createFromOptions(fileset,opts);}loadedModel=kind;}
+function setCameraState(s,on=false){$('cameraState').textContent=s;$('liveLed').classList.toggle('on',on);$('cameraBtn').textContent=running||starting?'■ Kamerayı durdur':'◉ Kamerayı başlat';}
+function empty(state,title,message){$('empty').hidden=!state;if(state){$('emptyTitle').textContent=title;$('emptyText').textContent=message;$('emptyStart').hidden=starting;}}
+function closeStream(){if(stream){stream.getTracks().forEach(t=>t.stop());stream=null;}video.pause();video.srcObject=null;}
+let facing='user',mirrored=true;
+async function startCamera(){if(running||starting)return;const id=++token;starting=true;setCameraState('İzin isteniyor');$('cameraBtn').textContent='■ Kamerayı durdur';empty(true,'Kamera açılıyor','Tarayıcı izin isterse kameraya erişimi onayla.');if(!window.isSecureContext||!navigator.mediaDevices?.getUserMedia){starting=false;setCameraState('HTTPS gerekli');empty(true,'Güvenli bağlantı gerekli','Codespaces port adresini HTTPS üzerinden aç. Yerel dosya önizlemesinden kamera çalışmayabilir.');return;}
+ try{const s=await navigator.mediaDevices.getUserMedia({audio:false,video:{facingMode:{ideal:facing},width:{ideal:1280},height:{ideal:720},frameRate:{ideal:30}}});if(id!==token){s.getTracks().forEach(t=>t.stop());return;}stream=s;video.srcObject=s;await video.play();if(id!==token)return;empty(true,'Yapay zekâ yükleniyor','İlk açılışta model indirilir; internet bağlantısı gereklidir.');setCameraState('Model yükleniyor');await getModel();if(id!==token)return;running=true;starting=false;frameStamps=[];smoothed=null;videoTime=-1;lastEval=0;resetTracking();setCameraState('Canlı takip',true);empty(false);raf=requestAnimationFrame(renderFrame);}
+ catch(e){if(id!==token)return;console.error(e);closeStream();running=false;starting=false;setCameraState('Başlatılamadı');let title='Kamera / model açılamadı',msg='İnterneti kontrol edip tekrar dene.';if(e?.name==='NotAllowedError'){title='Kamera izni engellendi';msg='Safari site ayarlarında kameraya izin ver.'}else if(e?.name==='NotFoundError'){title='Kamera bulunamadı';msg='Cihaz kamerasını kontrol et.'}else if(e?.name==='NotReadableError'){title='Kamera kullanımda';msg='Başka uygulamada kullanılıyorsa kapat.'}empty(true,title,msg);setCoach(title);}}
+function stopCamera(){++token;running=false;starting=false;cancelAnimationFrame(raf);closeStream();ctx.clearRect(0,0,canvas.width,canvas.height);smoothed=null;frameStamps=[];videoTime=-1;resetTracking();setCameraState('Kamera kapalı');$('qualityChip').textContent='Tam vücut görünmeli';$('fpsState').textContent='— FPS';empty(true,'Alanını hazırla','Telefonu veya iPad’i sabitle, tüm vücudun kadraja girsin. Geçişler için kamerayı yandan yerleştir.');renderRows([]);if(window.speechSynthesis)speechSynthesis.cancel();}
+$('cameraBtn').addEventListener('click',()=>running||starting?stopCamera():startCamera());$('emptyStart').addEventListener('click',startCamera);
+$('flipBtn').addEventListener('click',()=>{facing=facing==='user'?'environment':'user';mirrored=facing==='user';$('stage').classList.toggle('mirror',mirrored);$('mirrorBtn').classList.toggle('on',mirrored);$('mirrorBtn').setAttribute('aria-pressed',String(mirrored));if(running||starting){stopCamera();startCamera();}});
+$('mirrorBtn').addEventListener('click',()=>{mirrored=!mirrored;$('stage').classList.toggle('mirror',mirrored);$('mirrorBtn').classList.toggle('on',mirrored);$('mirrorBtn').setAttribute('aria-pressed',String(mirrored));});
+$('voiceBtn').addEventListener('click',()=>{if(!window.speechSynthesis){setCoach('Sesli konuşma bu tarayıcıda desteklenmiyor.');return;}voice=!voice;$('voiceBtn').classList.toggle('on',voice);$('voiceBtn').setAttribute('aria-pressed',String(voice));if(voice)speak('Sesli koç açık.',true);else speechSynthesis.cancel();});
+$('modelSelect').addEventListener('change',()=>{if(running||starting){stopCamera();startCamera();}});
+$('viewSelect').addEventListener('change',()=>{resetTracking();setCoach($('viewSelect').value==='side'?'Geçişler için yandan kamera açısı seçildi.':'Duruşlar için önden kamera açısı seçildi.');});
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&running)videoTime=-1;});window.addEventListener('pagehide',stopCamera);
+switchMode('teach');
+</script>
+</body></html>
